@@ -1,0 +1,454 @@
+<style>
+/* Set Global Settings */
+*{
+  margin: 0px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+
+/* Set section properties */
+.infoSection {
+  background-color: rgba(55,200,85, 0.8);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: var(--sectionHeight);
+  justify-content:center;
+  align-items: center;
+  color: #1F2B3C;
+  font-family: "Nirmala UI";
+  text-align: center;
+}
+
+.infoImage {
+   width: 60%;
+}
+
+.infoImage a {
+  background-color: rgba(113,55,200, 1);
+  display: inline-flex;
+}
+
+.infoImage img {
+  width: 100%;
+  height: 100%;
+}
+
+.infoImage img:hover {
+  opacity: 0.6;
+}
+
+
+/* Set Home properties */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 100vh;
+}
+
+#home p {
+  font-size: 1.25em;
+  font-family: "Courier New", Courier,monospace;
+}
+
+/* Create small animation for home text */
+#prod {
+  animation-name: invis;
+  animation-duration: 1s;
+  animation-fill-mode:forwards;
+}
+
+#sub {
+  visibility: hidden;
+  animation-name: vis1;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode:forwards;
+}
+#life {
+  visibility: hidden;
+  animation-name: vis2;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes invis {
+
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes vis1 {
+  50% {
+    visibility: initial;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes vis2 {
+  100% {
+    visibility: initial;
+  }
+}
+
+.svg-class {
+  width: 100%;
+}
+
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  font-size: 1.3em;
+  background: rgba(31, 43, 120, 0.8);
+}
+
+
+#nav-bar a {
+  padding: 0.3em 1.8em 0.3em 1.8em;
+  color: white;
+  text-decoration: none;
+}
+
+  
+#nav-bar a:hover {
+  background-color: rgb(255,42,90);
+}
+
+
+
+
+.infoText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 45%;
+  color: white;
+  border: thin;
+  padding-top: 2em;
+  font-size: 1.3em;
+  padding-bottom: 3.1em;
+}
+
+
+.infoText h {
+  font-size: 2.21em;
+  padding-bottom: 1em;
+}
+
+#CDISC {
+  background-color: rgba(31, 43, 120, 0.8);
+}
+
+
+#contact {
+  background-color: rgba(255,149,72,0.7);
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#contact-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  color: #1F2B3C;
+}
+#contact-img h {
+  font-size: 1.3em;
+  padding-top: 1em;
+}
+
+#contact-img img {
+  height: 20em;
+  border-radius: 100%;
+}
+
+#contact-links {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-links a {
+  text-decoration: none;
+  color: #1F2B3C;
+  font-size: 2.5em;
+  padding: 1em 0em 1em 0em;
+  transition: transform 0.3s ease-out;
+  background-color: transparent;
+}
+
+#contact-links a:hover {
+  transform: translateY(-8px);
+}
+
+/* Resize sections to account for mobile */
+@media (max-height: 940px) {
+  .infoSection {
+   --sectionHeight: auto;
+  }
+}
+
+@media (min-height: 900px) {
+ .infoSection {
+  --sectionHeight: 100vh;
+  }
+}
+
+@media (min-height: 550px) {
+ #CDISC {
+  --sectionHeight: 100vh;
+  }
+  
+  #contact {
+  --sectionHeight: 100vh;
+  }
+}
+
+@media (max-width: 900px) {
+  #nav-bar {
+    justify-content: center;
+  }
+}
+
+</style>
+
+
+<!-- Bring in Icons -->
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+  crossorigin="anonymous"
+/>
+
+<!-- Create Navigation Bar -->
+<nav id="nav-bar">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- Create Home Page with embedded SVG Logo -->
+<section id="home" class="infoSection">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="SVGRoot"
+   version="1.1"
+   viewBox="0 0 74.0 52.0"
+   height="82.0mm"
+   width="107.0mm"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="hedral.svg">
+  <defs
+     id="defs40">
+    <rect
+       x="1.7008929"
+       y="12.473214"
+       width="72.098961"
+       height="27.875744"
+       id="rect53" />
+    <rect
+       x="1.7008929"
+       y="12.473214"
+       width="72.098961"
+       height="27.875744"
+       id="rect1315" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1221"
+       is_visible="true"
+       lpeversion="1" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.6170721"
+     inkscape:cx="153.43251"
+     inkscape:cy="101.19331"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata43">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g883">
+      <g
+         aria-label="  edral"
+         transform="translate(1.5259855,-0.1890119)"
+         id="text51"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.9306px;line-height:1.25;font-family:'Nirmala UI';-inkscape-font-specification:'Nirmala UI';white-space:pre;shape-inside:url(#rect53);fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none">
+        <path
+           d="m 29.723028,27.853905 h -8.095129 q 0.04479,1.914615 1.030086,2.955897 0.985299,1.041283 2.709572,1.041283 1.937009,0 3.560513,-1.276411 v 1.724274 q -1.511538,1.097265 -3.997179,1.097265 -2.429658,0 -3.818035,-1.556325 -1.388376,-1.567521 -1.388376,-4.400257 0,-2.675983 1.511539,-4.35547 1.522735,-1.690684 3.773248,-1.690684 2.250513,0 3.482137,1.455556 1.231624,1.455556 1.231624,4.041966 z M 27.842002,26.29758 q -0.0112,-1.589914 -0.772564,-2.474444 -0.750171,-0.88453 -2.093761,-0.88453 -1.298803,0 -2.205727,0.929316 -0.906923,0.929316 -1.119658,2.429658 z"
+           style="text-align:center;text-anchor:middle;fill:#7137c8;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           id="path852" />
+        <path
+           d="M 42.296789,33.127495 H 40.46055 V 31.17929 h -0.04479 q -1.276411,2.216923 -3.941197,2.216923 -2.16094,0 -3.459744,-1.533932 -1.287607,-1.545128 -1.287607,-4.198718 0,-2.843932 1.433163,-4.557009 1.433162,-1.713077 3.818034,-1.713077 2.362479,0 3.437351,1.858633 h 0.04479 v -7.098633 h 1.836239 z M 40.46055,27.943478 v -1.690684 q 0,-1.388376 -0.91812,-2.351282 -0.918119,-0.962906 -2.328889,-0.962906 -1.679487,0 -2.642393,1.231624 -0.962906,1.231624 -0.962906,3.40376 0,1.981795 0.91812,3.135043 0.929316,1.142052 2.485641,1.142052 1.533932,0 2.485641,-1.108462 0.962906,-1.108462 0.962906,-2.799145 z"
+           style="text-align:center;text-anchor:middle;fill:#7137c8;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           id="path854" />
+        <path
+           d="m 52.015422,23.520828 q -0.481453,-0.369487 -1.388376,-0.369487 -1.175641,0 -1.970598,1.108461 -0.783761,1.108462 -0.783761,3.023077 v 5.844616 h -1.836239 v -11.4653 h 1.836239 v 2.362479 h 0.04479 q 0.39188,-1.209231 1.198034,-1.881026 0.806154,-0.682991 1.802649,-0.682991 0.716582,0 1.097265,0.156752 z"
+           style="text-align:center;text-anchor:middle;fill:#7137c8;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           id="path856" />
+        <path
+           d="m 62.215508,33.127495 h -1.836239 v -1.791453 h -0.04479 q -1.198034,2.060171 -3.526923,2.060171 -1.713077,0 -2.68718,-0.906923 -0.962906,-0.906923 -0.962906,-2.407265 0,-3.213419 3.784445,-3.739659 l 3.437351,-0.481453 q 0,-2.922307 -2.362479,-2.922307 -2.071368,0 -3.739658,1.410769 v -1.881026 q 1.690683,-1.074872 3.89641,-1.074872 4.041966,0 4.041966,4.277095 z m -1.836239,-5.799829 -2.765556,0.380683 q -1.27641,0.179146 -1.925812,0.638206 -0.649402,0.447863 -0.649402,1.601111 0,0.839743 0.593419,1.377179 0.604615,0.52624 1.601111,0.52624 1.365983,0 2.250513,-0.95171 0.895727,-0.962906 0.895727,-2.429658 z"
+           style="text-align:center;text-anchor:middle;fill:#7137c8;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           id="path858" />
+        <path
+           d="m 67.533885,33.127495 h -1.83624 V 16.153477 h 1.83624 z"
+           style="text-align:center;text-anchor:middle;fill:#7137c8;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
+           id="path860" />
+      </g>
+      <path
+         id="path59"
+         d="M 7.7983257,33.22553 2.2132356,37.424059"
+         style="fill:#c3004c;stroke:#df0059;stroke-width:0.942245;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:1" />
+      <path
+         id="path921"
+         d="m 10.409886,34.099379 0.98253,7.522456 1.918291,-1.099434 z"
+         style="fill:#ff9548;fill-opacity:1;stroke:#ff9548;stroke-width:0.29138px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <g
+         style="stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+         transform="rotate(-160,16.089359,35.643462)"
+         id="g1180">
+        <path
+           style="fill:#37c837;stroke:#37c837;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 13.680859,35.464996 v 2.385381"
+           id="path1157" />
+        <path
+           id="path1167"
+           d="M 15.26836,35.822803 V 37.49257"
+           style="fill:#37c837;stroke:#37c837;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           style="fill:#37c837;stroke:#37c837;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 16.855861,36.073268 v 1.168837"
+           id="path1169" />
+        <path
+           id="path1171"
+           d="m 18.443362,36.248594 v 0.818185"
+           style="fill:#37c837;stroke:#37c837;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           style="fill:#37c837;stroke:#37c837;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 20.030863,36.371322 v 0.572729"
+           id="path1173" />
+      </g>
+      <path
+         id="rect1185"
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.922091;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 11.566072,9.25736 h 7.607732 v 12.737586 h -7.607732 z" />
+      <path
+         sodipodi:nodetypes="csc"
+         id="path1219"
+         d="m 11.634837,22.401401 c 2.008455,0.605148 3.792119,1.929224 4.952691,3.676555 1.160571,1.747332 1.689387,3.904874 1.468359,5.990837 -0.03619,0.341512 -0.09173,0.680971 -0.16629,1.016204"
+         style="fill:none;stroke:#7137c8;stroke-width:1.897;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:2.8;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="rect857"
+         style="fill:#ffffff;stroke-width:1.75634;stroke-linecap:round;stroke-miterlimit:2.8;stroke-dasharray:none"
+         d="m 11.34971,21.475157 h 0.562666 v 2.164875 H 11.34971 Z" />
+      <path
+         style="fill:#6c5353;stroke:#7137c8;stroke-width:1.83751;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 10.187056,14.859575 v 16.186653 h 0.96"
+         id="path1256" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:'Times New Roman';stroke-width:0.264583;-inkscape-font-specification:'Times New Roman, ';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#00ffff;"
+       x="28.597837"
+       y="46.9058"
+       id="text97"><tspan
+         sodipodi:role="line"
+         id="tspan95"
+         x="28.597837"
+         y="46.9058"
+         style="stroke-width:0.264583;-inkscape-font-specification:'Times New Roman, ';font-family:'Times New Roman';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;fill:#00ffff;" /></text>
+  </g>
+</svg>
+  <p id="prod"><code>Data for <span style= "color: rgb(223,0,89)">Production.</span></code></p>
+  <p id ="sub"><code>Data for <span style= "color: rgb(225,149,72)">Submission.</span></code></p>
+  <p id="life"><code>Data for <span style= "color: rgb(55,200,55); font-weight: bold;">Life.</span></code></p>
+</section>
+
+<!-- Create About section with text about what Hedral does and with links to tools -->
+<section id="about">
+  <section id="ML" class="infoSection">
+  <div id = "ML-text" class="infoText">
+  <h> Bringing automation to safety monitoring </h>
+    <p>We develop tools & processes to derive insight from safety data.  Check out our open source machine learning dashboard for medical device Adverse Event analysis.</p>
+  </div>
+   <div class="infoImage">
+    <a 
+      href=" https://aboussina.shinyapps.io/DBSCAN-Clustering-for-MDR-Text/" 
+      target="_blank">
+   <img src="https://i.imgur.com/kplT9VJ.gif" ></a>
+    </div>
+    
+ </section>
+  
+<section id="CDISC" class="infoSection">
+    <div id = "CDISC-text" class="infoText">
+  <h> Making submissions easy </h>
+    <p>CDISC compliance doesn't have to be hard.  Try out our open source Trial Summary (TS) QC script or contact us for more. </p>
+  </div>    
+  <div class = "infoImage">
+  <a 
+      href="https://github.com/aboussina/TS-ClinicalTrials-QC" 
+      target="_blank">
+    <img src="https://i.imgur.com/rSi8Zyr.png"></a>
+  </div>
+
+</section>
+
+<!-- Create About section with text about what Hedral does and with links to tools -->
+<section id="contact" class="infoSection">
+  <div id="contact-img">
+  <img src="https://i.imgur.com/GF2zpBY.png" alt="Aaron Boussina Profile Photo">
+    <h><strong>Aaron Boussina</strong></h>
+    <p>Owner & Founder</p>
+  </div>
+  <div id="contact-links">
+    <a target="_blank" href="https://www.linkedin.com/in/aaron-boussina"><i class="fab fa-linkedin"></i>   LinkedIn</a>
+    <a target="_blank" href="https://github.com/aboussina"><i class="fab fa-github"></i>   GitHub</a>
+    <a href="mailto:aboussina@hedral.dev"><i class="fas fa-at"></i>   Email</a>
+  </div>
+</section>
+
