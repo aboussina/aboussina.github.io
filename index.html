@@ -163,16 +163,18 @@ svg {
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
+  align-items: center;
 }
 
 #contact-img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   color: #1F2B3C;
   padding-top: 2em;
   width: 20%;
+  align-items: center;
 }
 #contact-img h {
   font-size: 1.3em;
@@ -274,8 +276,7 @@ svg {
       height: auto;
   }
 }
-
-@media (orientation: landscape) {
+@media (max-device-height: 500px) and (orientation: landscape) {
 
     .infoSection {
     --sectionHeight: auto;
