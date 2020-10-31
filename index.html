@@ -3,7 +3,7 @@
 /* Set Global Settings */
 *{
   margin: 0px;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 
@@ -158,8 +158,9 @@ svg {
 
 #contact {
   background-color: rgba(255,149,72,0.7);
-  flex-flow: row;
+  flex-direction: row;
   justify-content: space-evenly;
+  width: 100%;
 }
 
 #contact-img {
@@ -169,7 +170,7 @@ svg {
   align-items:center;
   color: #1F2B3C;
   padding-top: 2em;
-  padding-right: 0em;
+  width: 20%;
 }
 #contact-img h {
   font-size: 1.3em;
@@ -177,17 +178,89 @@ svg {
 }
 
 #contact-img img {
-  height: 20em;
+  height: 10%;
+  width: auto;
   object-fit: scale-down;
   border-radius: 100%;
   max-width: 100%;
   max-height: 100%;
-  align-self: center;
- 
 }
 
+#contact-links {
+  display: flex;
+  flex-direction: column;
+}
 
+#contact-links a {
+  text-decoration: none;
+  color: #1F2B3C;
+  font-size: 2em;
+  padding: 0.6em 0em 0.6em 0em;
+  transition: transform 0.3s ease-out;
+  background-color: transparent;
+}
 
+#contact-links a:hover {
+  transform: translateY(-8px);
+}
+
+/* Switch from viewport to flex when desktop screen size is small to prevent spill-over */
+@media (max-height: 1050px) {
+  .infoSection {
+   --sectionHeight: auto;
+  }
+}
+
+@media (min-height: 1050px) {
+ .infoSection {
+  --sectionHeight: 100vh;
+  }
+}
+
+@media (min-height: 590px) {
+ #CDISC {
+  --sectionHeight: 100vh;
+  }
+  
+  #contact {
+  --sectionHeight: 100vh;
+  }
+  
+}
+
+/* Resize sections to account for mobile */
+@media (max-device-width: 500px) {
+  
+  * {
+    font-size: 112%;
+  }
+
+  #nav-bar {
+    justify-content: center;
+    font-size: 130%;
+  }
+  
+  .infoSection {
+    --sectionHeight: auto; 
+  }
+  
+  .infoText{
+    width: 90%
+  }
+  
+  .infoImage{
+    width: 90%;
+  }
+
+  svg {
+      width: 90%;
+      height: 90%;
+  }
+  
+  #contact {
+    flex-direction: column;
+  }
+}
 </style>
 
 <!-- Bring in Icons -->
