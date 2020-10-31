@@ -83,6 +83,7 @@ svg {
   width: 100%;
   font-size: 1.3em;
   background: rgba(31, 43, 120, 0.8);
+  z-index: 100;
 }
 
 
@@ -272,7 +273,12 @@ svg {
       height: auto;
   }
 
+@media (orientation: landscape) {
 
+    .infoSection {
+    --sectionHeight: auto; 
+  }
+}
 
 }
 </style>
