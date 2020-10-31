@@ -1,45 +1,11 @@
 <style>
     
-
 /* Set Global Settings */
 *{
   margin: 0px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
 }
 
-/* Set section properties */
-.infoSection {
-  background-color: rgba(55,200,160, 0.8);
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: var(--sectionHeight);
-  justify-content:center;
-  align-items: center;
-  color: #1F2B3C;
-  font-family: "Nirmala UI";
-  text-align: center;
-}
-
-.infoImage {
-   width: 60%;
-  padding-bottom: 3em;
-}
-
-.infoImage a {
-  background-color: rgba(113,55,200, 1);
-  display: inline-flex;
-}
-
-.infoImage img {
-  max-height: 100%;
-  max-width: 100%;
-  align-self: center;
-}
-
-.infoImage img:hover {
-  opacity: 0.6;
-}
 
 
 /* Set Home properties */
@@ -51,6 +17,10 @@
   background-color: white;
   height: 100vh;
   padding-bottom: 2em;
+}
+
+svg {
+    padding-bottom: 0px;
 }
 
 #home p {
@@ -126,6 +96,39 @@
   background-color: rgb(255,42,90);
 }
 
+/* Set section properties */
+.infoSection {
+  background-color: rgba(55,200,160, 0.8);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: var(--sectionHeight);
+  justify-content:center;
+  align-items: center;
+  color: #1F2B3C;
+  font-family: "Nirmala UI";
+  text-align: center;
+}
+
+.infoImage {
+   width: 60%;
+  padding-bottom: 3em;
+}
+
+.infoImage a {
+  background-color: rgba(113,55,200, 1);
+  display: inline-flex;
+}
+
+.infoImage img {
+  max-height: 100%;
+  max-width: 100%;
+  align-self: center;
+}
+
+.infoImage img:hover {
+  opacity: 0.6;
+}
 
 
 
@@ -155,7 +158,7 @@
 
 #contact {
   background-color: rgba(255,149,72,0.7);
-  flex-direction: row;
+  flex-flow: row;
   justify-content: space-evenly;
 }
 
@@ -166,6 +169,7 @@
   align-items:center;
   color: #1F2B3C;
   padding-top: 2em;
+  padding-right: 0em;
 }
 #contact-img h {
   font-size: 1.3em;
@@ -174,6 +178,7 @@
 
 #contact-img img {
   height: 20em;
+  object-fit: scale-down;
   border-radius: 100%;
   max-width: 100%;
   max-height: 100%;
@@ -181,77 +186,6 @@
  
 }
 
-#contact-links {
-  display: flex;
-  flex-direction: column;
-}
-
-#contact-links a {
-  text-decoration: none;
-  color: #1F2B3C;
-  font-size: 2em;
-  padding: 0.6em 0em 0.6em 0em;
-  transition: transform 0.3s ease-out;
-  background-color: transparent;
-}
-
-#contact-links a:hover {
-  transform: translateY(-8px);
-}
-
-/* Switch from viewport to flex when desktop screen size is small to prevent spill-over */
-@media (max-height: 900px) {
-  .infoSection {
-   --sectionHeight: auto;
-  }
-}
-
-@media (min-height: 900px) {
- .infoSection {
-  --sectionHeight: 100vh;
-  }
-}
-
-@media (min-height: 590px) {
- #CDISC {
-  --sectionHeight: 100vh;
-  }
-  
-}
-
-/* Resize sections to account for mobile */
-@media (max-device-width: 500px) {
-  
-  * {
-    font-size: 130%;
-  }
-
-  #nav-bar {
-    justify-content: center;
-    
-  }
-  
-  .infoSection{
-    --sectionHeight: auto; 
-  }
-  
-  .infoText{
-    width: 90%
-  }
-  
-  .infoImage{
-    width: 90%;
-  }
-
-  svg {
-      width: 90%;
-      height: 60%;
-  }
-  
-  #contact {
-    flex-direction: column;
-  }
-}
 
 
 </style>
