@@ -31,8 +31,8 @@
 }
 
 .infoImage img {
-  width: 100%;
-  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .infoImage img:hover {
@@ -197,7 +197,7 @@
 }
 
 /* Resize sections to account for mobile */
-@media (max-height: 940px) {
+@media (max-height: 900px) {
   .infoSection {
    --sectionHeight: auto;
   }
@@ -222,10 +222,11 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 380px) {
   #nav-bar {
     justify-content: center;
   }
+
 }
 
 </style>
