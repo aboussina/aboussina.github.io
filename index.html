@@ -199,6 +199,26 @@
   transform: translateY(-8px);
 }
 
+/* Switch from viewport to flex when desktop screen size is small to prevent spill-over */
+@media (max-height: 900px) {
+  .infoSection {
+   --sectionHeight: auto;
+  }
+}
+
+@media (min-height: 900px) {
+ .infoSection {
+  --sectionHeight: 100vh;
+  }
+}
+
+@media (min-height: 590px) {
+ #CDISC {
+  --sectionHeight: 100vh;
+  }
+  
+}
+
 /* Resize sections to account for mobile */
 @media (max-device-width: 500px) {
   
@@ -216,7 +236,7 @@
   }
   
   .infoText{
-    width: 85%
+    width: 90%
   }
   
   .infoImage{
@@ -225,7 +245,7 @@
 
   svg {
       width: 90%;
-      height: 70%;
+      height: 60%;
   }
   
   #contact {
@@ -233,34 +253,6 @@
   }
 }
 
-
-/* Switch from viewport to flex when desktop screen size is small to prevent spill-over */
-@media (max-height: 900px) {
-  .infoSection {
-   --sectionHeight: auto;
-  }
-}
-
-@media (min-height: 900px) {
- .infoSection {
-  --sectionHeight: 100vh;
-  }
-}
-
-
-
-@media (min-height: 590px) {
- #CDISC {
-  --sectionHeight: 100vh;
-  }
-  
-}
-
-@media (min-height: 400px) {
-  #contact {  
-  --sectionHeight: 100vh;
-  }
-}
 
 </style>
 
